@@ -37,5 +37,6 @@ checkVersion()
 from Base import *
 import File
 import Words
+from generate_random import get_random
 
 ### The End ###

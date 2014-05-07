@@ -9,7 +9,7 @@ Background layers for visual CAPTCHAs
 
 from Captcha.Visual import Layer, Pictures
 import random, os
-import ImageDraw, Image
+from PIL import ImageDraw, Image
 
 
 class SolidColor(Layer):
@@ -64,7 +64,7 @@ class TiledImage(Layer):
 
 class CroppedImage(Layer):
     """Pick a random image, cropped randomly. Source images should be larger than the CAPTCHA."""
-    def __init__(self, imageFactory=Pictures.nature):
+    def __init__(self, imageFactory=Pictures.abstract):
         self.imageName = imageFactory.pick()
         self.align = (random.uniform(0,1),
                       random.uniform(0,1))

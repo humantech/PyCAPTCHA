@@ -8,7 +8,7 @@ Random collections of images
 #
 
 from Captcha import File
-import Image
+from PIL import Image
 
 
 class ImageFactory(File.RandomFileFactory):
@@ -18,6 +18,6 @@ class ImageFactory(File.RandomFileFactory):
 
 
 abstract = ImageFactory("abstract")
-nature = ImageFactory("nature")
+#nature = ImageFactory("nature")
 
 ### The End ###
